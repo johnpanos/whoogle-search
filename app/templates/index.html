@@ -33,7 +33,7 @@
                 .collapsible { display: none; }
             </style>
         </noscript>
-        <title>Whoogle Search</title>
+        <title>PANOS Search</title>
     </head>
     <body id="main" style="display: none; background-color: {{ '#000' if config.dark else '#fff' }}">
     <script>
@@ -43,7 +43,7 @@
         {% endif %}
     </script>
         <div class="search-container">
-            <img class="logo" src="static/img/logo.png">
+            <img class="logo" src="static/img/logo.svg">
             <form id="search-form" action="search" method="{{ 'get' if config.get_only else 'post' }}">
                 <div class="search-fields">
                     <div class="autocomplete">
@@ -53,7 +53,7 @@
                 </div>
             </form>
             <br/>
-            <button id="config-collapsible" class="collapsible">Configuration</button>
+            <!-- <button id="config-collapsible" class="collapsible">TEst</button>
             <div class="content">
                 <div class="config-fields">
                     <form id="config-form" action="config" method="post">
@@ -143,12 +143,12 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <footer>
+        </div> -->
+        <!-- <footer>
             <p style="color: {{ '#fff' if config.dark else '#000' }};">
                 Whoogle Search v{{ version_number }} ||
                 <a style="color: #685e79" href="https://github.com/benbusby/whoogle-search">View on GitHub</a>
             </p>
-        </footer>
+        </footer> -->
     </body>
 </html>
