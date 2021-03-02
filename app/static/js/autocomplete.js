@@ -48,6 +48,11 @@ const autocomplete = (searchInput, autocompleteResults) => {
                 autocompleteList.appendChild(autocompleteItem);
             }
         }
+
+        if (autocompleteResults.length > 0) {
+            let searchBar = document.getElementById("search-bar");
+            searchBar.classList.add('autocomplete');
+        }
     });
 
     searchInput.addEventListener("keydown", function (e) {
@@ -111,6 +116,8 @@ const autocomplete = (searchInput, autocompleteResults) => {
     };
 
     const closeAllLists = el => {
+        let searchBar = document.getElementById("search-bar");
+        searchBar.classList.remove('autocomplete');
         let suggestions = document.getElementsByClassName("autocomplete-items");
         for (let i = 0; i < suggestions.length; i++) {
             if (el !== suggestions[i] && el !== searchInput) {
